@@ -1,2 +1,0 @@
-# vcStreamBot
-My GitHub
