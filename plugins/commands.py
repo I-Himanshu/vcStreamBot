@@ -59,7 +59,7 @@ async def show_help(client, message):
 async def repo_(client, message):
     buttons = [
         [
-            InlineKeyboardButton('🧩 Repository', url='https://t.me/mjsqueen786''),
+            InlineKeyboardButton('🧩 Group', url='https://t.me/mjsqueen786'),
             InlineKeyboardButton('⚙️ Update Channel', url='https://t.me/mjsqueen786'),
             
         ],
