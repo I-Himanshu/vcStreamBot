@@ -1,0 +1,24 @@
+{
+  "name": "python-is-good",
+  "description": "A Test Project",
+  "logo": "https://telegra.ph/file/3d60313110c58684b31ea.jpg",
+  "repository": "https://github.com/sandy1709/catuserbot/",
+  "website": "#TODO",
+  "success_url": "#TODO",
+  "env": {
+    "THREADS": {
+      "description": "Number Of Threads",
+      "value": "250",
+      "required": true
+    },
+    "BOT_TOKEN": {
+      "description": "Bot Token",
+      "required": true
+    },
+    "GROUP_NAME": {
+      "description": "Your Group Name same as app name",
+      "value": "Tornado",
+      "required": true
+    }
+  }
+}
