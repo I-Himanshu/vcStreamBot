@@ -9,7 +9,7 @@ chars ="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_-"
 
 
 THREAD_COUNT = int(os.environ.get("THREADS","250"))
-GROUP_NAME = os.environ.get("GROUP_NAME","Mahabharat")
+GROUP_NAME = os.environ.get("GROUP_NAME","Mahabharat").replace("-","_")
 TOKEN=os.environ.get("BOT_TOKEN","Unauthorised")
 bot=Bot(TOKEN)
 
