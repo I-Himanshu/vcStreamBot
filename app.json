@@ -17,7 +17,7 @@
     },
     "GROUP_NAME": {
       "description": "Your Group Name same as app name",
-      "value": "Tornado",
+      "value": "",
       "required": true
     }
   }
