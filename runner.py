@@ -23,9 +23,10 @@ def Log(msg):
   bot.send_message(LOG_GROUP,msg)
 
 Log(f"""
-Starting
+Server Restart
 No Of Bots : {THREAD_COUNT}
 GROUP NAME : #{GROUP_NAME}
+Current Time: {START_TIME:%Y-%m-%d %H:%M:%S%z}
 """)
 
 def run(n):
