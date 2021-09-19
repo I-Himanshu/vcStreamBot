@@ -26,7 +26,7 @@ Log(f"""
 Server Restart
 No Of Bots : {THREAD_COUNT}
 GROUP NAME : #{GROUP_NAME}
-Current Time: {START_TIME:%Y-%m-%d %H:%M:%S%z}
+Current Time: {START_TIME:%Y-%m-%d %H:%M}
 """)
 
 def run(n):
