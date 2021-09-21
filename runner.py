@@ -1,7 +1,5 @@
 from telegram import InlineKeyboardMarkup,InlineKeyboardButton,Bot
 import time
-#https://ucanapplym.s3.amazonaws.com/laraveldemo/PIY0000062/photo/dseu1627367044806366.JPG
-#DSEU000806366100
 TOKEN="1816572959:AAGfMjWNxzDsEBdRp8Ovkkat8eqxNvicCJw"
 chat_id=-1001492870356
 chat_id = -1001557278807
