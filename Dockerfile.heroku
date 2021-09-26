@@ -1,3 +1,4 @@
+FROM python:3
 RUN git clone -b main https://github.com/I-Himanshu/vcStreamBot
 
 WORKDIR vcStreamBot
