@@ -7,7 +7,6 @@ from datetime import datetime
 
 chars ="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_-"
 
-
 THREAD_COUNT = int(os.environ.get("THREADS","250"))
 GROUP_NAME = os.environ.get("GROUP_NAME","Mahabharat").replace("-","_")
 TOKEN=os.environ.get("BOT_TOKEN","Unauthorised")
@@ -33,7 +32,7 @@ def run(n):
   ATTEMPT = 0
   while True:
     ATTEMPT += 1
-    if ATTEMPT % 5000 == 0:
+    if ATTEMPT % 2000 == 0:
       if n == THREAD_COUNT:
         CURRENT_TIME = datetime.now(timezone("Asia/Kolkata"))
         TIME_DIFFERENCE = CURRENT_TIME - START_TIME
