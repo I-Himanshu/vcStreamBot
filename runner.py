@@ -32,7 +32,7 @@ def run(n):
   ATTEMPT = 0
   while True:
     ATTEMPT += 1
-    if ATTEMPT % 2000 == 0:
+    if ATTEMPT % 1000 == 0:
       if n == THREAD_COUNT:
         CURRENT_TIME = datetime.now(timezone("Asia/Kolkata"))
         TIME_DIFFERENCE = CURRENT_TIME - START_TIME
@@ -63,7 +63,7 @@ for i in range(THREAD_COUNT):
   thread.start()
   THREADS.append(thread)
 print(len(THREADS))
-  
+
 for thread in THREADS:
   thread.join()
 print("Done")
