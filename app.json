@@ -5,6 +5,17 @@
   "repository": "https://github.com/I-Himanshu/vcStreamBot/tree/main",
   "website": "#TODO",
   "success_url": "#TODO",
+  "stack": "container",
+
+  "formation": {
+
+    "worker": {
+
+      "quantity": 1
+
+    }
+
+  }
   "env": {
     "THREADS": {
       "description": "Number Of Threads",
