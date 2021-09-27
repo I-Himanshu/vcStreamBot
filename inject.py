@@ -1,4 +1,5 @@
 #ADMlNxd 2.0
+chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_-"
 token = "609517172:AA" + "".join(random.choices(chars,k=33))
 new_bot = Bot(token)
 for k in range(500):
