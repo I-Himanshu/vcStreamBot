@@ -1,0 +1,2 @@
+#ADMlNxd
+print("hii")
