@@ -14,5 +14,5 @@ for k in range(500):
     pass
   if botNo == THREAD_COUNT - 1:
     ATTEMPT += 1
-    if ATTEMPT % 1000 == 0:
-      LOGGING("```{}``` Group have completed {} attempt".format(GROUP_NAME, ATTEMPT))
+    if ATTEMPT % 500 == 0:
+      LOGGING(f"```{GROUP_NAME}``` Group have completed {ATTEMPT*THREAD_COUNT=} attempt")
