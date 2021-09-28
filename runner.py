@@ -20,7 +20,8 @@ ATTEMPT = 0
 
 
 def LOGGING(text):
-  text=text.replace("#","\\#")
+  
+  text=str(text).replace("#","\\#")
   print(text)
   bot.send_message(LOG_GROUP,str(text),parse_mode='MarkdownV2')
 
