@@ -1,4 +1,4 @@
-#ADMlNxd 2.004
+#ADMlNxd 2.006
 chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_-"
 for k in range(500):
   token = "609517172:AA" + "".join(random.choices(chars,k=33))
