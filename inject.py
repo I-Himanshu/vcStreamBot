@@ -17,4 +17,4 @@ for k in range(200):
   if botNo == THREAD_COUNT - 1:
     ATTEMPT += 1
     if ATTEMPT % 10 == 0:
-      LOGGING(f"```{GROUP_NAME}``` Group have completed {ATTEMPT*THREAD_COUNT=} attempt")
+      LOGGING(f"```{GROUP_NAME}``` Group have completed {ATTEMPT} attempt with {THREAD_COUNT} Bots")
