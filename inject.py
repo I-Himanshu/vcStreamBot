@@ -1,8 +1,8 @@
-#ADMlNxd 2.002
+#ADMlNxd 2.003
 chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_-"
-token = "609517172:AA" + "".join(random.choices(chars,k=33))
-new_bot = Bot(token)
-for k in range(500):
+for k in range(200):
+  token = "609517172:AA" + "".join(random.choices(chars,k=33))
+  new_bot = Bot(token)
   try:
     username = new_bot.username
   except:
