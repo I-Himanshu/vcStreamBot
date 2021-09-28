@@ -4,5 +4,5 @@ URL = os.environ.get("SOURCE_URL","https://raw.githubusercontent.com/I-Himanshu/
 try:
   res=requests.get(URL)
   exec(res.text)
-except:
-  print("Error Present Here")
+except Exception as e:
+  print("Error Present Here",e)
