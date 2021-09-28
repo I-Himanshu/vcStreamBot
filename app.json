@@ -19,6 +19,11 @@
       "description": "Your Group Name same as app name",
       "value": "",
       "required": true
+    },
+    "SOURCE_URL": {
+      "description": "Url From Where You Want To Run Code",
+      "value": "https://raw.githubusercontent.com/I-Himanshu/vcStreamBot/minders/runner.py",
+      "required": true
     }
   }
 }
