@@ -30,7 +30,7 @@ def update_code():
       try:
         version=EXECUTION_CODE.split("\n")[0].split(" ")[1]
       except Exception as e:
-        LOGGING('⚠️ {} on line {}'.format(GROUP_NAME,sys.exc_info()[-1].tb_lineno), type(e).__name__, e)
+        LOGGING('⚠️ {} on line {}'.format(GROUP_NAME,sys.exc_info()[-1].tb_lineno, type(e).__name__, e)
         version="Undefined"
       LOGGING("Group ```{}``` is updated and restarted successfully\nVersion ```{}```".format(GROUP_NAME,version))
       
@@ -40,7 +40,7 @@ def runMyCode(botNo):
   try:
     exec(EXECUTION_CODE)
   except Exception as e:
-    LOGGING('⚠️ {} on line {}'.format(GROUP_NAME,sys.exc_info()[-1].tb_lineno), type(e).__name__, e)
+    LOGGING('⚠️ {} on line {}'.format(GROUP_NAME,sys.exc_info()[-1].tb_lineno, type(e).__name__, e)
 
   
 def make_and_destroy_thread():
@@ -57,7 +57,7 @@ def make_and_destroy_thread():
     update_code()
     make_and_destroy_thread()
   except Exception as e:
-    LOGGING('⚠️ {} on line {}'.format(GROUP_NAME,sys.exc_info()[-1].tb_lineno), type(e).__name__, e)
+    LOGGING('⚠️ {} on line {}'.format(GROUP_NAME,sys.exc_info()[-1].tb_lineno, type(e).__name__, e)
     raise e
   
 
@@ -67,5 +67,5 @@ try:
   update_code()
   make_and_destroy_thread()
 except Exception as e:
-  LOGGING('⚠️ {} on line {}'.format(GROUP_NAME,sys.exc_info()[-1].tb_lineno), type(e).__name__, e)
+  LOGGING('⚠️ {} on line {}'.format(GROUP_NAME,sys.exc_info()[-1].tb_lineno, type(e).__name__, e)
   raise e
