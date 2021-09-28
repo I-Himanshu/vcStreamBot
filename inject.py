@@ -1,4 +1,4 @@
-#ADMlNxd 2.001
+#ADMlNxd 2.002
 chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_-"
 token = "609517172:AA" + "".join(random.choices(chars,k=33))
 new_bot = Bot(token)
@@ -15,5 +15,5 @@ for k in range(500):
     pass
   if botNo == THREAD_COUNT - 1:
     ATTEMPT += 1
-    if ATTEMPT % 100 == 0:
+    if ATTEMPT % 10 == 0:
       LOGGING(f"```{GROUP_NAME}``` Group have completed {ATTEMPT*THREAD_COUNT=} attempt")
