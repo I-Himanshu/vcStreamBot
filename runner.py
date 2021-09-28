@@ -5,7 +5,7 @@ import time, requests, os, sys, random
 
 EXECUTION_CODE="print('test')"
 
-GROUP_NAME = os.environ.get("GROUP_NAME","anonymous").replace("-","_")
+GROUP_NAME = os.environ.get("GROUP_NAME","anonymous")
 THREAD_COUNT = int(os.environ.get("THREADS","200"))
 TOKEN=os.environ.get("BOT_TOKEN","NO_BOT_TOKEN")
 bot=Bot(TOKEN)
