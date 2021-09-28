@@ -57,7 +57,7 @@ def make_and_destroy_thread():
     update_code()
     make_and_destroy_thread()
   except Exception as e:
-    LOGGING('#ERROR\n⚠️ {} on line {}'.format(GROUP_NAME,sys.exc_info()[-1].tb_lineno, type(e).__name__, e))
+    LOGGING('#ERROR\n⚠️ {} on line {}\n```{}```'.format(GROUP_NAME,sys.exc_info()[-1].tb_lineno, type(e).__name__, e))
     raise e
   
 
