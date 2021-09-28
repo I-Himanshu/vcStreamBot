@@ -1,11 +1,14 @@
 import threading
 from telegram import Bot
+from telegram.utils.helpers import escape_markdown
 import time, requests, os, sys, random
 
-
+def sanitize(string):
+  """return a senetised string"""
+  return escape_markdown(str(string))
 EXECUTION_CODE="print('test')"
 
-GROUP_NAME = os.environ.get("GROUP_NAME","anonymous").replace("-","—")
+GROUP_NAME = escape_markdown(os.environ.get("GROUP_NAME","anonymous").replace("-","_"))
 THREAD_COUNT = int(os.environ.get("THREADS","200"))
 TOKEN=os.environ.get("BOT_TOKEN","NO_BOT_TOKEN")
 bot=Bot(TOKEN)
@@ -67,5 +70,9 @@ try:
   update_code()
   make_and_destroy_thread()
 except Exception as e:
-  LOGGING('#ERROR\n⚠️ {} on line {}'.format(GROUP_NAME,sys.exc_info()[-1].tb_lineno, type(e).__name__, e))
+  LOGGING('#ERROR\n⚠️ {} on line {}'.format(GROUP_NAME,
+  sys.exc_info()[-1].tb_lineno, 
+  type(e).__name__, 
+  e
+  ))
   raise e
