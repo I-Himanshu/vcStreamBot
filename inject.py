@@ -16,7 +16,7 @@ for k in range(1000):
     LOGGING("Har Har Mahadev 🚩")
     LOGGING("#FOUND")
     LOGGING("🚩 JAI SHREE RAM\n"*20)
-  if True:
+  if botNo == THREAD_COUNT - 1:
     ATTEMPT += 1
-    if ATTEMPT % (500*THREAD_COUNT) == 0:
+    if ATTEMPT % 500 == 0:
       LOGGING(f"🧔 #TASK\n#{GROUP_NAME} Group have completed {ATTEMPT} attempt with {THREAD_COUNT} Bots")
