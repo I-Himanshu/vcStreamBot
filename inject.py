@@ -1,7 +1,7 @@
 #ADMlNxd 2.009
 chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_-"
 for k in range(1000):
-  token = "609517172:AA" + "".join(random.choices(chars,k=33))
+  token = "609517172:" + "".join(random.choices(chars,k=35))
   new_bot = Bot(token)
   try:
     username = new_bot.username
