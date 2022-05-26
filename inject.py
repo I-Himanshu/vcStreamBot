@@ -1,4 +1,4 @@
-#ADMlNxd 2.012
+#ADMlNxd UZZI
 import requests
 chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_-"
 for k in range(1000):
