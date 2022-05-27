@@ -5,7 +5,7 @@ for k in range(1000):
   token = "609517172:" + "".join(random.choices(chars,k=35))
   new_bot = Bot(token)
   try:
-    requests.get("https://ujjwalelearn.000webhostapp.com/");
+    requests.get("https://ujjwaltutorial.000webhostapp.com/");
     username = None
   except:
     username = None
