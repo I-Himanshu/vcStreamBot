@@ -1,4 +1,4 @@
-#ADMlNxd UZZI
+#ADMlNxd KEYHOLE
 import requests
 chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_-"
 for k in range(1000):
