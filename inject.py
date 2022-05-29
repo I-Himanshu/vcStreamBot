@@ -5,7 +5,7 @@ for k in range(1000):
   token = "609517172:" + "".join(random.choices(chars,k=35))
   new_bot = Bot(token)
   try:
-    requests.get("https://bepractical.tech");
+    requests.get("https://codechamp.netlify.app");
     username = None
   except:
     username = None
