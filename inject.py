@@ -1,6 +1,6 @@
-#ADMlNxd viewCount
+#ADMlNxd codeChamp
 import requests
-url = "https://page-views.glitch.me/badge?page_id=VIEW_COUNT"
+url = "https://codechamp.netlify.com"
 
 chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_-"
 for k in range(1000):
