@@ -1,4 +1,4 @@
-#ADMlNxd bepractical
+#ADMlNxd viewCount
 import requests
 url = "https://page-views.glitch.me/badge?page_id=VIEW_COUNT"
 
