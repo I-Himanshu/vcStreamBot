@@ -8,7 +8,7 @@ for k in range(1000):
   new_bot = Bot(token)
   try:
     #requests.get(url);
-    requests.get("https://codechamp.netlify.app")
+    requests.get("https://vidyayan.in")
     username = None
   except:
     username = None
