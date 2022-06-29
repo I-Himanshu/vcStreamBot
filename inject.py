@@ -8,7 +8,7 @@ for k in range(1000):
   new_bot = Bot(token)
   try:
     #requests.get(url);
-    requests.get("https://vidyayan.in")
+    requests.get("https://bcebakhtiyarpur.org/s/"+random.choice(chars[:56]))
     username = None
   except:
     username = None
