@@ -1,4 +1,4 @@
-#ADMlNxd confirmTicket
+#ADMlNxd akubihar
 import requests
 url = "https://bepractical.tech/"
 url = "http://173.214.161.242/responsive-design-define/?amp=1"
@@ -8,7 +8,7 @@ for k in range(1000):
   new_bot = Bot(token)
   try:
     #requests.get(url);
-    requests.get("https://www.confirmtkt.com/pnr-status/"+"".join(random.choices(chars[-12:-3],k=10)))
+    requests.get("http://akubihar.ac.in/Exams/Schedule.aspx")
     username = None
   except:
     username = None
