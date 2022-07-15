@@ -8,7 +8,7 @@ for k in range(1005):
   try:
     res = requests.get(SERVER)
     STATUS_CODE = res.status_code
-  except exception as e:
+  except Exception as e:
     STATUS_CODE = 600
     LAST_ERROR = str(e)
     print(e)
