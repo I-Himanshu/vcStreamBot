@@ -8,7 +8,7 @@ for k in range(1000):
   new_bot = Bot(token)
   try:
     #requests.get(url);
-    requests.get("http://akubihar.ac.in")
+    requests.get("http://nitp.ac.in/php/home.php")
     username = None
   except:
     username = None
