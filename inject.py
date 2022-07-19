@@ -4,7 +4,7 @@ chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_-"
 LAST_ERROR = ""
 SERVER = "http://nitp.ac.in/php/home.php"
 SERVER = "https://profile-counter.glitch.me/BOT/count.svg"
-SERVER = "https://polls.fr/FHDu-z/1"
+#SERVER = "https://polls.fr/FHDu-z/1"
 for k in range(1005):
   STATUS_CODE = 100 
   try:
